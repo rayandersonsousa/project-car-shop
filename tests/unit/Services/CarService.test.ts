@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import { expect } from 'chai';
 import { Model } from 'mongoose';
 import CarService from '../../../src/Services/CarService'; 
-import { carRequest, carResponse, allCars, validId } from '../utils/mocks';
+import { carRequest, carResponse, allCars, validCarId } from '../utils/mocks';
 
 describe('Testes para CarService', function () {
   it('Testa se é possível criar um carro', async function () {
@@ -27,7 +27,7 @@ describe('Testes para CarService', function () {
     sinon.stub(Model, 'findById').resolves(carResponse);
 
     const service = new CarService();
-    const cars = await service.findById(validId);
+    const cars = await service.findById(validCarId);
 
     expect(cars).to.be.deep.equal(carResponse);
   });

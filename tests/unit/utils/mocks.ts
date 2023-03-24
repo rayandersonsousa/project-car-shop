@@ -1,4 +1,5 @@
-const validId = '641df7663ca0be239ac9569c';
+const validCarId = '641df7663ca0be239ac9569c';
+const validMotorcycleId = '641e216b76b8252a082fc66e';
 
 const newCar = {
   model: 'Camaro',
@@ -65,4 +66,49 @@ const allCars = [
   },
 ];
 
-export { newCar, carRequest, carResponse, allCars, validId };
+const motorcycleRequest = {
+  model: 'Honda Biz 250',
+  year: 2005,
+  color: 'Red',
+  status: true,
+  buyValue: 8.000,
+  category: 'Street',
+  engineCapacity: 250,
+};
+
+const motorcycleResponse = {
+  id: '641e216b76b8252a082fc66e',
+  model: 'Honda Biz 250',
+  year: 2005,
+  color: 'Red',
+  status: true,
+  buyValue: 8,
+  category: 'Street',
+  engineCapacity: 250,
+};
+
+const allMotorcycles = [
+  {
+    id: '641e216b76b8252a082fc66e',
+    model: 'Honda Biz 125',
+    year: 2018,
+    color: 'Green',
+    status: true,
+    buyValue: 11.000,
+    category: 'Street',
+    engineCapacity: 125,
+  },
+  {
+    id: '641e229576b8252a082fc670',
+    model: 'Yamaha Fluo',
+    year: 2022,
+    color: 'White',
+    status: true,
+    buyValue: 14.000,
+    category: 'Street',
+    engineCapacity: 125,
+  },
+];
+
+export { newCar, carRequest, carResponse, allCars, validCarId, motorcycleRequest,
+  motorcycleResponse, allMotorcycles, validMotorcycleId };
