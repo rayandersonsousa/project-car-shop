@@ -6,5 +6,6 @@ const carRouter = Router();
 carRouter.post('/cars', (req, res, next) => new CarController(req, res, next).registerCar());
 carRouter.get('/cars', (req, res, next) => new CarController(req, res, next).findAll());
 carRouter.get('/cars/:id', (req, res, next) => new CarController(req, res, next).findById());
+carRouter.put('/cars/:id', (req, res, next) => new CarController(req, res, next).update());
 
 export default carRouter;

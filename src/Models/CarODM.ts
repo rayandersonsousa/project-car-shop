@@ -3,6 +3,7 @@ import {
   Schema,
   model,
   models,
+  UpdateQuery,
 } from 'mongoose';
 import ICar from '../Interfaces/ICar';
 
@@ -33,7 +34,15 @@ class CarODM {
 
   public async findById(id: string) {
     return this.model.findById(id);
-  } 
+  }
+  
+  public async update(_id: string, data: ICar): Promise<ICar | null> {
+    return this.model.findByIdAndUpdate(
+      { _id },
+      { ...data } as UpdateQuery<ICar>,
+      { new: true },
+    );
+  }
 }
 
 export default CarODM;
