@@ -1,15 +1,26 @@
 const validCarId = '641df7663ca0be239ac9569c';
 const validMotorcycleId = '641e216b76b8252a082fc66e';
 
-const newCar = {
+const updatedCar = {
+  id: '641df7663ca0be239ac9569c',
   model: 'Camaro',
   year: 2015,
-  color: 'Yellow',
+  color: 'Red',
   status: true,
   buyValue: 85.650,
   doorsQty: 2,
   seatsQty: 5,
-  id: '641df7663ca0be239ac9569c',
+};
+
+const updatedMotorcycle = {
+  id: '641e216b76b8252a082fc66e',
+  model: 'Honda Biz',
+  year: 2005,
+  color: 'Pink',
+  status: true,
+  buyValue: 8,
+  category: 'Street',
+  engineCapacity: 250,
 };
 
 const carRequest = {
@@ -67,7 +78,7 @@ const allCars = [
 ];
 
 const motorcycleRequest = {
-  model: 'Honda Biz 250',
+  model: 'Honda Biz',
   year: 2005,
   color: 'Red',
   status: true,
@@ -78,7 +89,7 @@ const motorcycleRequest = {
 
 const motorcycleResponse = {
   id: '641e216b76b8252a082fc66e',
-  model: 'Honda Biz 250',
+  model: 'Honda Biz',
   year: 2005,
   color: 'Red',
   status: true,
@@ -110,5 +121,5 @@ const allMotorcycles = [
   },
 ];
 
-export { newCar, carRequest, carResponse, allCars, validCarId, motorcycleRequest,
-  motorcycleResponse, allMotorcycles, validMotorcycleId };
+export { updatedCar, carRequest, carResponse, allCars, validCarId, motorcycleRequest,
+  motorcycleResponse, allMotorcycles, validMotorcycleId, updatedMotorcycle };
